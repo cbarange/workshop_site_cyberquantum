@@ -5,7 +5,7 @@
       <v-btn href="/" text>
         <div class="d-flex align-center">
           <v-img alt="Vuetify Logo" class="shrink mr-2" contain src="@/assets/cyberquantum_logo.png" transition="scale-transition" width="40" />
-          CuberQuantum
+          CyberQuantum
         </div>
       </v-btn>
 
@@ -28,11 +28,15 @@
 
     <v-footer app padless color="primary lighten-1">
       <v-row justify="center" no-gutters >
-      <v-btn v-for="link in links" :key="link" color="white" text rounded class="my-2" >
-        {{ link }}
+      <v-col class="primary lighten-1 py-1 text-center white--text" cols="11" >
+        
+        <v-btn v-for="link in links_1" :key="link" color="white" text rounded class="my-1" >
+          {{ link }}
+        </v-btn>
+          {{ new Date().getFullYear() }}—<strong>CyberQuantum</strong>
+        <v-btn v-for="link in links_2" :key="link" color="white" text rounded class="my-1" >
+          {{ link }}
       </v-btn>
-      <v-col class="primary lighten-2 py-4 text-center white--text" cols="12" >
-        {{ new Date().getFullYear() }} — <strong>CyberQuantum</strong>
       </v-col>
     </v-row>
     </v-footer>
@@ -45,10 +49,11 @@ export default {
   name: 'App',
 
   data: () => ({
-    links: [
+    links_1: [
         'Home',
-        'Équipe',
         'Services',
+      ],
+    links_2: [
         'Blog',
         'Nous Contacter',
       ],

@@ -2,12 +2,12 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img
+        <!-- <v-img
           :src="require('@/assets/cyberquantum_logo.png')"
           class="my-3"
           contain
           height="200"
-        />
+        /> -->
       </v-col>
 
       <v-col class="mb-4">
@@ -16,69 +16,146 @@
         </h1>
       </v-col>
 
-      <v-col class="mb-5" cols="12" >
+      <v-col class="mb-8" cols="12" >
 
-        <v-row justify="center">
-          <v-card v-card elevation="2" outlined shaped tile >
-            <v-card-title></v-card-title>
-            <v-icon x-large center>mdi-lock</v-icon>
-            <v-card-title class="display-5">Confidentialité</v-card-title>
-          </v-card>
+        <v-row justify="space-around">
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              <v-card-title></v-card-title>
+              <v-icon color="green darken-2" x-large center>timeline</v-icon>
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Présentation<br/> Quantique
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
           
-          <v-card v-card elevation="2" outlined shaped tile >
-            <v-card-title></v-card-title>
-            <v-icon x-large center>speed</v-icon>
-            <v-card-title class="display-5">Diagnostique</v-card-title>
-          </v-card>
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              <v-card-title></v-card-title>
+              <v-icon color="blue darken-2" x-large center>speed</v-icon>
+              <v-card-title class="display-5">
+              
+                <v-spacer /> <div class="text-center">
+                  Diagnostique<br/> Quantique
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
 
-           <!-- Tendances -->
+
+            <v-hover v-slot="{ hover }">
+          <a href="/leaderboard" text style="text-decoration:none">
+              <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              
+                <v-card-title></v-card-title>
+                <v-icon color="purple darken-2" x-large center>view_timeline</v-icon>
+                <v-card-title class="display-5">
+                  <v-spacer /> <div class="text-center">
+                    Classement<br/>⠀
+                  </div> <v-spacer />
+              </v-card-title>
+              </v-card>
+          </a>
+            </v-hover>
+
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              <v-card-title></v-card-title>
+              <v-icon color="teal darken-2" x-large center>archive</v-icon>
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Tendances
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+
+            
+
+           
            <!-- Histoire -->
            <!-- Supremation quantique pour bientôt ? -->
-           <!-- Premier pas  -->
+           
         </v-row>
       </v-col>
 
       <v-col class="mb-5" cols="12" >
 
-        <v-row justify="center">
-          <v-card v-card elevation="2" outlined shaped tile >
-            <v-card-title></v-card-title>
-            <v-icon x-large center>category</v-icon>
-            <v-card-title class="display-5">Premiers Pas</v-card-title>
-          </v-card>
-          <v-card v-card elevation="2" outlined shaped tile >
-            <v-card-title></v-card-title>
-            <v-icon x-large center>menu_book</v-icon>
-            <v-card-title class="display-5">Tendances</v-card-title>
-          </v-card>
+        <v-row justify="space-around">
+          
 
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+
+              <v-card-title></v-card-title>
+              <v-icon color="purple" x-large center>category</v-icon>
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Premiers Pas<br/>Quantique
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+          
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              <v-card-title></v-card-title>
+              <v-icon color="blue-grey darken-2" x-large center>archive</v-icon>
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Tendances
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              <v-card-title></v-card-title>
+              <v-icon color="orange darken-2" x-large center>terminal</v-icon>
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Quantum@Home  <br/><v-chip class="ma-2" color="yellow" text-color=""> Early Access </v-chip>
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+
+          <a href="/prevent-key" text style="text-decoration:none">
+          <v-hover v-slot="{ hover }">
+            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+              <v-card-title></v-card-title>
+              <v-icon x-large center>webhook</v-icon>
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Prevent Key <v-chip class="ma-2" color="green" text-color="white" >PRO</v-chip>
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+          </a>
+
+
+          
+
+            <!-- <v-icon x-large center>filter_drama</v-icon>
+            <v-icon x-large center>blur_on</v-icon>
             <v-icon x-large center>workspaces</v-icon>
             <v-icon x-large center>grid_view</v-icon>
             <v-icon x-large center>business</v-icon>
             <v-icon x-large center>forum</v-icon>
-            <v-icon x-large center>blur_on</v-icon>
-            <v-icon x-large center>filter_drama</v-icon>
             <v-icon x-large center>camera</v-icon>
-            <v-icon x-large center>tune</v-icon>
-            <v-icon x-large center>fitbit</v-icon>
-            <v-icon x-large center>hive</v-icon>
-            <v-icon x-large center>shield</v-icon>
-            <v-icon x-large center>domain</v-icon>
             <v-icon x-large center>archive</v-icon>
             <v-icon x-large center>view_kanban</v-icon>
-            <v-icon x-large center>view_timeline</v-icon>
-            <v-icon x-large center>terminal</v-icon>
             <v-icon x-large center>view_carousel</v-icon>
-            <v-icon x-large center>webhook</v-icon>
-            <v-icon x-large center>space_dashboard</v-icon>
-            <v-icon x-large center>view_headline</v-icon>
-            <v-icon x-large center>timeline</v-icon>
-            <v-icon x-large center>reorder</v-icon>
-            <v-icon x-large center>lock_open</v-icon>
-            <v-icon x-large center>task_alt</v-icon>
             <v-icon x-large center>description</v-icon>
+            <v-icon x-large center>task_alt</v-icon>
+            <v-icon x-large center>shield</v-icon>
             <v-icon x-large center>timeline</v-icon>
-            <v-icon x-large center>timeline</v-icon>
+            <v-icon x-large center>space_dashboard</v-icon> -->
+            
 
         </v-row>
       </v-col>
