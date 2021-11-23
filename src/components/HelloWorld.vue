@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/logo.svg')"
+          :src="require('@/assets/cyberquantum_logo.png')"
           class="my-3"
           contain
           height="200"
@@ -12,81 +12,77 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          CyberQuantum
         </h1>
-
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
+      <v-col class="mb-5" cols="12" >
 
         <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
+          <v-card v-card elevation="2" outlined shaped tile >
+            <v-card-title></v-card-title>
+            <v-icon x-large center>mdi-lock</v-icon>
+            <v-card-title class="display-5">Confidentialité</v-card-title>
+          </v-card>
+          
+          <v-card v-card elevation="2" outlined shaped tile >
+            <v-card-title></v-card-title>
+            <v-icon x-large center>speed</v-icon>
+            <v-card-title class="display-5">Diagnostique</v-card-title>
+          </v-card>
+
+           <!-- Tendances -->
+           <!-- Histoire -->
+           <!-- Supremation quantique pour bientôt ? -->
+           <!-- Premier pas  -->
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
+      <v-col class="mb-5" cols="12" >
 
         <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
+          <v-card v-card elevation="2" outlined shaped tile >
+            <v-card-title></v-card-title>
+            <v-icon x-large center>category</v-icon>
+            <v-card-title class="display-5">Premiers Pas</v-card-title>
+          </v-card>
+          <v-card v-card elevation="2" outlined shaped tile >
+            <v-card-title></v-card-title>
+            <v-icon x-large center>menu_book</v-icon>
+            <v-card-title class="display-5">Tendances</v-card-title>
+          </v-card>
+
+            <v-icon x-large center>workspaces</v-icon>
+            <v-icon x-large center>grid_view</v-icon>
+            <v-icon x-large center>business</v-icon>
+            <v-icon x-large center>forum</v-icon>
+            <v-icon x-large center>blur_on</v-icon>
+            <v-icon x-large center>filter_drama</v-icon>
+            <v-icon x-large center>camera</v-icon>
+            <v-icon x-large center>tune</v-icon>
+            <v-icon x-large center>fitbit</v-icon>
+            <v-icon x-large center>hive</v-icon>
+            <v-icon x-large center>shield</v-icon>
+            <v-icon x-large center>domain</v-icon>
+            <v-icon x-large center>archive</v-icon>
+            <v-icon x-large center>view_kanban</v-icon>
+            <v-icon x-large center>view_timeline</v-icon>
+            <v-icon x-large center>terminal</v-icon>
+            <v-icon x-large center>view_carousel</v-icon>
+            <v-icon x-large center>webhook</v-icon>
+            <v-icon x-large center>space_dashboard</v-icon>
+            <v-icon x-large center>view_headline</v-icon>
+            <v-icon x-large center>timeline</v-icon>
+            <v-icon x-large center>reorder</v-icon>
+            <v-icon x-large center>lock_open</v-icon>
+            <v-icon x-large center>task_alt</v-icon>
+            <v-icon x-large center>description</v-icon>
+            <v-icon x-large center>timeline</v-icon>
+            <v-icon x-large center>timeline</v-icon>
+
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
     </v-row>
   </v-container>
 </template>
