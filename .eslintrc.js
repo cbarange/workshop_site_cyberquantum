@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    "es2020": true,  // <- activate “es2020” globals
   },
   'extends': [
     'plugin:vue/essential',
