@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import LeaderBoard from '@/views/LeaderBoard.vue'
+import CheckCertModulus from '@/views/CheckCertModulus.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   { path: '/leaderboard', name: 'LeaderBoard', component: LeaderBoard },
+  { path: '/check-cert-modulus', name: 'CheckCertModulus', component: CheckCertModulus },
 ]
 
 const router = new VueRouter({
