@@ -109,7 +109,7 @@
         return {
           domain:'',
           modulus:'',
-          result:true,
+          result:false,
           request_done:true
         }
       },
@@ -120,7 +120,7 @@
             return
           }
           this.request_done=true
-          axios.get(`http://localhost:5225/modulus/${this.domain}/443`).then( response => {
+          axios.get(`https://workshop-cyberquantum-api.herokuapp.com/modulus/${this.domain}/443`).then( response => {
             this.modulus=response.data
           // await new Promise(r => setTimeout(r, 500))
           this.request_done=false

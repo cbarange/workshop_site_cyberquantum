@@ -41,7 +41,7 @@
       }
     },
     mounted:function() {
-      axios.get('http://localhost:5225/leaderboard').then( response => this.scores=response.data)
+      axios.get('https://workshop-cyberquantum-api.herokuapp.com/leaderboard').then( response => this.scores=response.data)
     }
   }
 </script>
