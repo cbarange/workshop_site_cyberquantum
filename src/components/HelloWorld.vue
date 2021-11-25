@@ -92,7 +92,7 @@
             </v-card>
           </v-hover>
           
-
+          <a href="/quantumhome" text style="text-decoration:none">
           <v-hover v-slot="{ hover }">
             <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
               <v-card-title></v-card-title>
@@ -104,8 +104,9 @@
               </v-card-title>
             </v-card>
           </v-hover>
+          </a>
 
-          <a href="/prevent-key" text style="text-decoration:none">
+          <a href="/preventkey" text style="text-decoration:none">
           <v-hover v-slot="{ hover }">
             <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
               <v-card-title></v-card-title>

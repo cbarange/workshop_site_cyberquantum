@@ -4,6 +4,8 @@ import Home from '@/views/Home.vue'
 import LeaderBoard from '@/views/LeaderBoard.vue'
 import CheckCertModulus from '@/views/CheckCertModulus.vue'
 import Presentation from '@/views/Presentation.vue'
+import PreventKey from '@/views/PreventKey.vue'
+import QuantumHome from '@/views/QuantumHome.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +26,8 @@ const routes = [
   { path: '/leaderboard', name: 'LeaderBoard', component: LeaderBoard },
   { path: '/check-cert-modulus', name: 'CheckCertModulus', component: CheckCertModulus },
   { path: '/presentation', name: 'Presentation', component: Presentation },
+  { path: '/preventkey', name: 'PreventKey', component: PreventKey },
+  { path: '/quantumhome', name: 'QuantumHome', component: QuantumHome }
 ]
 
 const router = new VueRouter({
