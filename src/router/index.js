@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import LeaderBoard from '@/views/LeaderBoard.vue'
 import CheckCertModulus from '@/views/CheckCertModulus.vue'
+import Presentation from '@/views/Presentation.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,7 @@ const routes = [
   },
   { path: '/leaderboard', name: 'LeaderBoard', component: LeaderBoard },
   { path: '/check-cert-modulus', name: 'CheckCertModulus', component: CheckCertModulus },
+  { path: '/presentation', name: 'Presentation', component: Presentation },
 ]
 
 const router = new VueRouter({

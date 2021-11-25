@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="width:70%">
     <v-row class="text-center">
       <v-col cols="12">
         <!-- <v-img
@@ -19,17 +19,19 @@
       <v-col class="mb-8" cols="12" >
 
         <v-row justify="space-around">
+          <a href="/presentation" text style="text-decoration:none">
           <v-hover v-slot="{ hover }">
             <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
               <v-card-title></v-card-title>
               <v-icon color="green darken-2" x-large center>timeline</v-icon>
               <v-card-title class="display-5">
                 <v-spacer /> <div class="text-center">
-                  Présentation<br/> Quantique
+                  Factorisation<br/> Quantique
                 </div> <v-spacer />
               </v-card-title>
             </v-card>
           </v-hover>
+          </a>
           
           <a href="/check-cert-modulus" text style="text-decoration:none">
           <v-hover v-slot="{ hover }">
@@ -62,18 +64,7 @@
           </a>
             </v-hover>
 
-          <v-hover v-slot="{ hover }">
-            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
-              <v-card-title></v-card-title>
-              <v-icon color="teal darken-2" x-large center>archive</v-icon>
-              <v-card-title class="display-5">
-                <v-spacer /> <div class="text-center">
-                  Tendances
-                </div> <v-spacer />
-              </v-card-title>
-            </v-card>
-          </v-hover>
-
+          
             
 
            
@@ -87,31 +78,20 @@
 
         <v-row justify="space-around">
           
-
+          
           <v-hover v-slot="{ hover }">
-            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
+            <v-card disabled v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
 
               <v-card-title></v-card-title>
               <v-icon color="purple" x-large center>category</v-icon>
               <v-card-title class="display-5">
                 <v-spacer /> <div class="text-center">
-                  Premiers Pas<br/>Quantique
+                  Premiers Pas<br/><v-chip class="ma-2" text-color=""> Coming soon... </v-chip>
                 </div> <v-spacer />
               </v-card-title>
             </v-card>
           </v-hover>
           
-          <v-hover v-slot="{ hover }">
-            <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">
-              <v-card-title></v-card-title>
-              <v-icon color="blue-grey darken-2" x-large center>archive</v-icon>
-              <v-card-title class="display-5">
-                <v-spacer /> <div class="text-center">
-                  Tendances
-                </div> <v-spacer />
-              </v-card-title>
-            </v-card>
-          </v-hover>
 
           <v-hover v-slot="{ hover }">
             <v-card v-card :elevation="hover ? 12 : 2" outlined shaped tile width="200px">

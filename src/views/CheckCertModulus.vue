@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="result_frame" v-if="result">
+    <v-container class="result_frame mx-auto" v-if="result">
       <v-icon class="cross_close" @click="close_result_frame" color="red">close</v-icon>
       <v-row class="text-center">
         <v-col cols="12" class="mb-4">
@@ -59,7 +59,7 @@
               Les meilleurs calculateurs quantiques actuels prennent <strong>{{get_duration().time}}</strong><br/> pour rompre la sécurité de votre siteweb avec un cout: 
               <strong>{{get_duration().cost}}</strong>
             </v-card-text>
-            <v-rating empty-icon="check_box_outline_blank" full-icon="check_box" hover length="5" size="20" :value="get_duration().score" ></v-rating>
+            <v-rating empty-icon="star_outline" readonly full-icon="star" hover length="5" size="20" :value="get_duration().score" ></v-rating>
           </v-card>
 
               <!-- <v-textarea class="v-textarea" :value="modulus" v-model="modulus">    
@@ -82,9 +82,9 @@
           </v-col>
 
           <v-col class="mb-4">
-            <h1 class="display-2 font-weight-bold mb-3">
+            <h2 style="max-width:70%" class="display-2 mx-auto font-weight-bold mb-3">
               Découvrer quand la sécurité de votre site web sera dépassée par les calculateurs quantiques.
-            </h1>
+            </h2>
           </v-col>
           <v-col class="mb-8" cols="12">
             <v-text-field class="v-text-field" v-model="domain" label="Domaine, ex:epsi.fr"></v-text-field>
@@ -133,6 +133,7 @@
           this.result=false
         },
         get_modulus_length:function(){
+          /* eslint-disable */
           /* global BigInt */
           return BigInt(this.modulus).toString(2).length
         },
