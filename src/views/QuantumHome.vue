@@ -77,15 +77,60 @@
 
       <v-stepper-content step="3">
 
-        
+        <v-row class="text-center">
+      <v-col class="mb-8" cols="12" >
+
+        <v-row  justify="space-around">
+          
+          <v-hover  v-slot="{ hover }">
+            <v-card @click="algo('qiskit')" v-card :elevation="hover ? 12 : 2" outlined shaped tile width="250px">
+              <v-card-title></v-card-title>
+              <img width="75px" src="@/assets/quantum_logo.png" />
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Algorithme Shor
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+
+          <v-hover  v-slot="{ hover }">
+            <v-card @click="algo('naive')" v-card :elevation="hover ? 12 : 2" outlined shaped tile width="250px">
+              <v-card-title></v-card-title>
+              <img width="75px" src="@/assets/binary_logo.png" />
+              <v-card-title class="display-5">
+                <v-spacer /> <div class="text-center">
+                  Algorithme Binaire
+                </div> <v-spacer />
+              </v-card-title>
+            </v-card>
+          </v-hover>
+
+        </v-row>
+      </v-col>
+    </v-row>
+
         <v-btn text @click="e1 = 2"> Précédent </v-btn>
         <!-- <v-btn color="primary" @click="e1 = 1" > Terminer </v-btn> -->
 
       </v-stepper-content>
 
       <v-stepper-content step="4">
+         <v-row class="text-center">
+      <v-col class="mb-8" cols="12" >
+        <br/>
 
-        
+        <v-row  justify="space-around">
+          
+        <v-btn :loading="loading3" :disabled="loading3" color="blue-grey" class="ma-2 white--text" @click="download()" >
+          Télécharger
+          <v-icon right dark > mdi-cloud-upload </v-icon>
+        </v-btn>
+
+        </v-row>
+      </v-col>
+    </v-row>
+        <br/><br/>
         <v-btn text @click="e1 = 2"> Précédent </v-btn>
         <!-- <v-btn color="primary" @click="e1 = 1" > Terminer </v-btn> -->
 
@@ -98,7 +143,7 @@
 </template>
 
 <script>
-  
+  var axios = require('axios');
   export default {
     name: 'QuantumHome',
 
@@ -107,10 +152,22 @@
         e1: 1,
         pseudo:'',
         mail:'',
-        distribution:''
+        distribution:'',
+        alg:'',
+        loading3: false,
+        loader: null,
       }
     },
     methods: {
+      download:function() {
+        this.loader = 'loading3'
+        var config = { method: 'post', url: `https://workshop-cyberquantum-api.herokuapp.com/searcher/${this.pseudo}`, headers: { } };
+        axios(config).then(function (response) { console.log(JSON.stringify(response.data)); }).catch(function (error) { console.log(error); });
+
+        window.open(`https://workshop-cyberquantum-api.herokuapp.com/download/${this.distribution}/${this.alg}/${this.pseudo}`, '_blank').focus();
+        
+
+      },
       first_step:function() {
         if(this.mail=="" || this.pseudo==""){
           alert("Les champs 'Nom Utilisateur' et 'Email' ne peuvent pas être vide")
@@ -122,8 +179,22 @@
       select:function(distribution) {
         this.distribution= distribution
         this.e1 = 3
+      },
+      algo:function(choice){
+        this.alg=choice
+        this.e1 = 4
       }
-    }
+    },
+    watch: {
+      loader () {
+        const l = this.loader
+        this[l] = !this[l]
+
+        setTimeout(() => (this[l] = false), 3000)
+
+        this.loader = null
+      },
+    },
 
 
   }
