@@ -13,7 +13,7 @@
       <h2 class="font-weight-light">Be ready for tomorrow 🚀</h2> 
       <v-spacer></v-spacer>
 
-      <v-btn href="https://github.com/cbarange/workshop_cybersecu_quantum" target="_blank" text >
+      <v-btn href="https://colab.research.google.com/drive/1YB0gosNn40E1zHiUeplhVP6X8hVTDor6#scrollTo=08y3pie4PC5l" target="_blank" text >
         <span class="mr-2">Contribuer</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
